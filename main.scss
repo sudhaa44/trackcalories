@@ -1,0 +1,134 @@
+$icon-font-path: "/bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+
+@import 'bootstrap-sass-official/assets/stylesheets/bootstrap.scss';
+
+// Disable navbar collapse
+
+.navbar-collapse.collapse {
+  display: block!important;
+}
+
+.navbar-nav>li, .navbar-nav {
+  float: left !important;
+}
+
+.navbar-nav.navbar-right:last-child {
+  margin-right: -15px !important;
+}
+
+.navbar-right {
+  float: right!important;
+}
+
+// END Disable navbar collapse
+
+// Variables
+$text-colors-calories: #d2906e;
+$text-colors-protein: #d3666b;
+$text-colors-carbs: #eeeb5c;
+$text-colors-fat: #7c82e2;
+$text-colors-date: #959595;
+$background-colors-app: #fafafa;
+$border-colors-light-grey: #efefef;
+$margin-small: 0.6em;
+$margin-medium: 0.8em;
+$margin-large: 1em;
+$padding-small: 0.8em;
+$padding-medium: 1em;
+$padding-large: 1.2em;
+$text-size-small: 12px;
+$text-size-medium: 14px;
+$text-size-large: 16px;
+
+// END Variables
+
+// Placeholders
+%shadow--2dp {
+  box-shadow:0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12)
+}
+
+%rounded--2dp {
+  border-radius: 4px;
+}
+
+%link--simple {
+  color: $navbar-default-link-color;
+  &:hover {
+    color: $navbar-default-link-hover-color;
+  }
+}
+
+// END Placeholders
+
+body {
+  background-color: $background-colors-app;
+  font-size: $text-size-small;
+}
+
+.card {
+  background-color: white;
+  @extend %shadow--2dp;
+  @extend %rounded--2dp;
+}
+
+.thumbnail--no-border {
+  border: none;
+}
+
+.date {
+  color: $text-colors-date;
+  font-size: inherit;
+  margin-top: $margin-small;
+  margin-bottom: 0;
+}
+
+.nutrients {
+  border-top: thin solid $border-colors-light-grey;
+  padding-top: $padding-medium;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1em;
+}
+
+.calories {
+  color: $text-colors-calories;
+}
+
+.protein {
+  color: $text-colors-protein;
+}
+
+.carbs {
+  color: $text-colors-carbs;
+}
+
+.fat {
+  color: $text-colors-fat;
+}
+
+.search-view__header {
+  display: flex;
+}
+
+#back {
+  padding: $padding-large;
+  @extend %link--simple;
+}
+
+#input {
+  margin-top: $margin-small;
+}
+
+.add {
+  @extend %link--simple;
+}
+
+.media--thumbnail {
+  width: 64px;
+  height: auto;
+}
+
+.result {
+  border-bottom: thin solid $border-colors-light-grey;
+}
